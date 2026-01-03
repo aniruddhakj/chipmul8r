@@ -1,0 +1,15 @@
+/build/
+/cmake-build-*/
+*.o
+*.obj
+*.exe
+*.out
+.vscode/
+.idea/
+
+# CMake/FetchContent artifacts (local build/download dirs)
+_deps/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
