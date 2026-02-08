@@ -1,24 +1,3 @@
-#include <gtest/gtest.h>
-#include "chip8/Chip8.h"
-#include <vector>
-
-using namespace chipmul8r;
-
-TEST(Chip8Basic, ResetClearsRegisters) {
-	Chip8 c;
-	c.reset();
-	for (size_t i = 0; i < 16; ++i) {
-		EXPECT_EQ(c.getRegister(i), 0u);
-	}
-}
-
-TEST(Chip8Basic, LoadROMPlacesBytesAt0200) {
-	Chip8 c;
-	std::vector<uint8_t> rom = {0xAA, 0xBB, 0xCC};
-	c.loadROM(rom);
-	// Simple check: no crash — deeper memory inspection can be added later
-	SUCCEED();
-}
 
 #include <catch2/catch_test_macros.hpp>
 #include "chip8/Chip8.h"
